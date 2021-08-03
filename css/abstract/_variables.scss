@@ -21,4 +21,4 @@ $blueGradient: linear-gradient(to right top, #03283a, #032637, #042333, #042130,
 $easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
 
 // Dropshadows
-$basicDropshadow: 0 .2rem 1rem $blueLightest;
+$basicDropshadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
