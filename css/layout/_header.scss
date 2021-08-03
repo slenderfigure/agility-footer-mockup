@@ -55,15 +55,57 @@
   }
 
   &__changeable-logo {
-    color: $bluePrimary;
-    font-size: 1.15rem;
-    font-weight: 500;
+    padding-right: 2.2rem;
+    
+    .text {
+      color: $bluePrimary;
+      font-size: 1.15rem;
+      font-weight: 600;
+
+      @media screen and (max-width: 850px) {
+        display: none;
+      }
+    }
+
+    .image {
+      display: none;
+      height: 35px;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 850px) {
+        display: block;
+      }
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+    width: 45px;
+    height: 45px;
+    justify-self: end;
+    grid-column: -1;
+
+    @media screen and (max-width: 1100px) {
+      display: block;
+    }
+
+    .icon {
+      color: $bluePrimary;
+    }
   }
 
   &__main-links-list {
     display: flex;
     align-items: center;
     gap: .5rem;
+
+    @media screen and (max-width: 1100px) {
+      display: none;
+    }
   }
 
   &__main-link {
@@ -99,21 +141,19 @@
     align-items: center;
     justify-self: end;
     gap: 1.5rem;
+
+    @media screen and (max-width: 1100px) {
+      display: none;
+    }
   }
 
-  &__notification-wrapper {
+  // &__notification-wrapper {
 
-  }
+  // }
 
   &__notification-button {
     width: 45px;
     height: 45px;
-    border-radius: 100%;
-    transition: background-color .3s $easeOutCirc;
-    
-    &:hover {
-      background-color: rgba($blueLighter, .1);
-    }
 
     .icon {
       color: $blueDarker;
@@ -121,13 +161,13 @@
     }
   }
 
-  &__user-profile-wrapper {
+  // &__user-profile-wrapper {
     
-  }
+  // }
 
-  &__user-profile-button {
+  // &__user-profile-button {
 
-  }
+  // }
 
   &__user-pic {
     width: 45px;

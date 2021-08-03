@@ -231,6 +231,19 @@ button {
   margin: auto;
 }
 
+.button-round {
+  display: block;
+  border-radius: 100%;
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: background-color 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.button-round:hover {
+  background-color: rgba(9, 73, 106, 0.1);
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -296,9 +309,54 @@ button {
 }
 
 .header__changeable-logo {
+  padding-right: 2.2rem;
+}
+
+.header__changeable-logo .text {
   color: #03283a;
   font-size: 1.15rem;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 850px) {
+  .header__changeable-logo .text {
+    display: none;
+  }
+}
+
+.header__changeable-logo .image {
+  display: none;
+  height: 35px;
+}
+
+.header__changeable-logo .image img {
+  width: auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  .header__changeable-logo .image {
+    display: block;
+  }
+}
+
+.header__menu-btn {
+  display: none;
+  width: 45px;
+  height: 45px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  grid-column: -1;
+}
+
+@media screen and (max-width: 1100px) {
+  .header__menu-btn {
+    display: block;
+  }
+}
+
+.header__menu-btn .icon {
+  color: #03283a;
 }
 
 .header__main-links-list {
@@ -309,6 +367,12 @@ button {
       -ms-flex-align: center;
           align-items: center;
   gap: .5rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .header__main-links-list {
+    display: none;
+  }
 }
 
 .header__main-link .link {
@@ -356,16 +420,15 @@ button {
   gap: 1.5rem;
 }
 
+@media screen and (max-width: 1100px) {
+  .header__user-cta {
+    display: none;
+  }
+}
+
 .header__notification-button {
   width: 45px;
   height: 45px;
-  border-radius: 100%;
-  -webkit-transition: background-color 0.3s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: background-color 0.3s cubic-bezier(0, 0.55, 0.45, 1);
-}
-
-.header__notification-button:hover {
-  background-color: rgba(9, 73, 106, 0.1);
 }
 
 .header__notification-button .icon {

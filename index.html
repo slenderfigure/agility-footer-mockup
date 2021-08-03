@@ -11,7 +11,15 @@
 <body>
   <header class="rpx-header header">
     <nav class="header__navbar" id="main-navbar">
-      <a href="/" class="header__changeable-logo">RecoveryPlanner</a>
+      <a href="/" class="header__changeable-logo">
+        <span class="text">RecoveryPlanner</span>
+        <figure class="image">
+          <img src="assets/img/logo-blue.jpg" alt="Aigility logo" draggable="false" loading="lazy">
+        </figure>
+      </a>
+      <button class="header__menu-btn button-round" type="button" role="Display side menu" aria-label="Menu button">
+        <i class="fas fa-bars icon"></i>
+      </button>
 
       <ul class="header__main-links-list">
         <li class="header__main-link">
@@ -45,7 +53,7 @@
 
       <div class="header__user-cta">
         <div class="header__notification-wrapper">
-          <button class="header__notification-button" type="button" role="notifications and alerts" aria-label="Notifications & Alerts">
+          <button class="header__notification-button button-round" type="button" role="notifications and alerts" aria-label="Notifications & Alerts">
             <i class="fas fa-bell icon"></i>
           </button>      
           <!-- Notification panel popup goes here -->

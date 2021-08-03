@@ -2,3 +2,15 @@
   max-width: 1300px;
   margin: auto;
 }
+
+.button-round {
+  display: block;
+  border-radius: 100%;
+  transition: background-color .3s $easeOutCirc;
+  white-space: nowrap;
+  overflow: hidden;
+  
+  &:hover {
+    background-color: rgba($blueLighter, .1);
+  }
+}
