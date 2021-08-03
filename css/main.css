@@ -312,7 +312,16 @@ button {
 }
 
 .header__main-link .link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -330,6 +339,10 @@ button {
 
 .header__main-link .link:hover {
   background-color: rgba(9, 73, 106, 0.1);
+}
+
+.header__main-link .link .icon {
+  font-size: 0.75rem;
 }
 
 .header__user-cta {
