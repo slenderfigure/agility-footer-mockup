@@ -1,0 +1,24 @@
+.main-content {
+  width: 100%;
+  margin-top: 5rem;
+  padding: 3rem 1.5rem;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1.5rem;
+  }
+
+  .fake-content {
+    width: 100%;
+    min-height: 200px;
+    background-color: #dadde4;
+    border-radius: .6rem;
+
+    &-1 {
+      height: 250px;
+      grid-column: 1/-1;
+    }
+  }
+}

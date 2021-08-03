@@ -3,8 +3,10 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 500;
 
   &__navbar {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -12,12 +14,39 @@
     height: 80px;
     padding: 0 1.5rem;
     background-color: $white;
-    box-shadow: $basicDropshadow;
-    transition: all .4s $easeOutCirc;
-    overflow: hidden;
+    transition: all .3s $easeOutCirc;
+    
+    &::before {
+      content: '';
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      box-shadow: $basicDropshadow;
+      transition: opacity $easeOutCirc;
+      z-index: -1;
+    }
 
-    &[scrolled] {
-      height: 55px;
+    &[data-scrolled] {
+      height: 60px;
+      box-shadow: $basicDropshadow;
+
+      &::before {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .header__main-link {
+
+        .link {
+          padding: .6rem 1rem;
+          border-radius: .3rem;
+        }
+      }
     }
   
     @media screen and (max-width: 620px) {
@@ -34,7 +63,7 @@
   &__main-links-list {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
   }
 
   &__main-link {
@@ -42,11 +71,17 @@
     .link {
       display: block;
       width: fit-content;
-      padding: .6rem 1rem;
+      padding: .8rem 1.2rem;
       border-radius: .5rem;
+      transition: all .3s $easeOutCirc;
       
       &.active {
         color: $bluePrimary;
+        font-weight: 500;
+        background-color: rgba($blueLighter, .1);
+      }
+
+      &:hover {
         background-color: rgba($blueLighter, .1);
       }
     }
@@ -64,10 +99,18 @@
   }
 
   &__notification-button {
-
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    transition: background-color .3s $easeOutCirc;
+    
+    &:hover {
+      background-color: rgba($blueLighter, .1);
+    }
 
     .icon {
-
+      color: $blueDarker;
+      font-size: $fontSizeMedium;
     }
   }
 
