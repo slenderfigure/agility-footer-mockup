@@ -1,8 +1,8 @@
 .footer {
   position: relative;
   width: 100%;
-  color: $fontColorPrimary;
-  font-size: .85rem;
+  color: $white;
+  font-size: $fontSizeSmall;
   background-color: $bluePrimary;
   background-image: $blueGradient;
   padding: 0 1.5rem;
@@ -64,8 +64,8 @@
   }
 
   &__address {
-    color: rgba($fontColorPrimary, .8);
-    font-size: .84rem;
+    color: rgba($white, .8);
+    font-size: $fontSizeSmall;
     font-style: normal;
     line-height: 1.6;
     
@@ -81,11 +81,10 @@
       transition: color .4s $easeOutCirc;
 
       &:hover:not(:disabled) {
-        color: $fontColorPrimary
+        color: $white
       }
     }
   }
-
 
   &__main-links {
     display: flex;
@@ -114,7 +113,7 @@
     transition: background-color .4s $easeOutCirc;
 
     &:hover {
-      background-color: rgba(255, 255, 255, .1);
+      background-color: rgba($white, .1);
     }
   }
 
@@ -133,7 +132,7 @@
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    border-top: 1px solid rgba($fontColorPrimary, .1);
+    border-top: 1px solid rgba($white, .1);
     padding: 2rem 0;
     line-height: 1.3;
 
@@ -148,11 +147,11 @@
   &__owner-info {
     display: inline-block;
     width: fit-content;
-    color: rgba($fontColorPrimary, .7);
-    font-size: .74rem;
+    color: rgba($white, .7);
+    font-size: $fontSizeSmaller;
 
     @media only screen and (max-width: 620px) {
-      font-size: .7rem;
+      font-size: $fontSizeSmallest;
     }
   }
 
@@ -172,18 +171,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 100%;
-    background-color: rgba($fontColorPrimary, .07);
+    background-color: rgba($white, .07);
     transition: background-color .4s $easeOutCirc;
 
     &:hover:not(:disabled) {
-      background-color: rgba($fontColorPrimary, .2);
+      background-color: rgba($white, .2);
     }
 
     .icon {
-      font-size: 1rem;
+      font-size: $fontSizeMedium;
     }
   }
 

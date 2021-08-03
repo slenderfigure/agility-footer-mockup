@@ -3,9 +3,13 @@ html, body {
 }
 
 body {
-  font-size: .9rem;
-  font-family: 'Montserrat', sans-serif;
+  font-size: $fontSizeNormal;
+  font-family: $primaryFontFamily;
   box-sizing: border-box;
+
+  ::selection {
+    background-color: rgba($white, .4);
+  }
 }
 
 * {
@@ -20,6 +24,6 @@ img {
 }
 
 .main-content {
-  min-height: calc(100vh - 383.44px);
+  min-height: calc(100vh - (383.44px - 80px));
   padding-bottom: 10rem;
 }

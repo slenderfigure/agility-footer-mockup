@@ -4,10 +4,18 @@ html, body {
 }
 
 body {
-  font-size: .9rem;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body ::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+body ::selection {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 * {
@@ -23,7 +31,7 @@ img {
 }
 
 .main-content {
-  min-height: calc(100vh - 383.44px);
+  min-height: calc(100vh - (383.44px - 80px));
   padding-bottom: 10rem;
 }
 
@@ -204,16 +212,121 @@ a {
   font-size: inherit;
 }
 
+button,
+input,
+select,
+textarea {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: inherit;
+  height: 80px;
+  padding: 0 1.5rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.2rem 1rem #e0e2e7;
+          box-shadow: 0 0.2rem 1rem #e0e2e7;
+  -webkit-transition: all 0.4s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.4s cubic-bezier(0, 0.55, 0.45, 1);
+  overflow: hidden;
+}
+
+.header__navbar[scrolled] {
+  height: 55px;
+}
+
+@media screen and (max-width: 620px) {
+  .header__navbar {
+    padding: 0 1rem;
+  }
+}
+
+.header__changeable-logo {
+  color: #03283a;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.header__main-links-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.header__main-link .link {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+}
+
+.header__main-link .link.active {
+  color: #03283a;
+  background-color: rgba(9, 73, 106, 0.1);
+}
+
+.header__user-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: end;
+  gap: 1.5rem;
+}
+
+.header__user-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.header__user-pic .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .footer {
   position: relative;
   width: 100%;
   color: #fff;
-  font-size: .85rem;
+  font-size: 0.85rem;
   background-color: #03283a;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#03283a), color-stop(#032637), color-stop(#042333), color-stop(#042130), to(#041f2d));
   background-image: linear-gradient(to right top, #03283a, #032637, #042333, #042130, #041f2d);
@@ -299,7 +412,7 @@ a {
 
 .footer__address {
   color: rgba(255, 255, 255, 0.8);
-  font-size: .84rem;
+  font-size: 0.85rem;
   font-style: normal;
   line-height: 1.6;
 }
@@ -410,12 +523,12 @@ a {
   width: -moz-fit-content;
   width: fit-content;
   color: rgba(255, 255, 255, 0.7);
-  font-size: .74rem;
+  font-size: 0.75rem;
 }
 
 @media only screen and (max-width: 620px) {
   .footer__owner-info {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -448,8 +561,8 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 100%;
   background-color: rgba(255, 255, 255, 0.07);
   -webkit-transition: background-color 0.4s cubic-bezier(0, 0.55, 0.45, 1);

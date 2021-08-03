@@ -9,7 +9,55 @@
   <script src="https://kit.fontawesome.com/56a075a703.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="rpx-header header"></header>
+  <header class="rpx-header header">
+    <nav class="header__navbar">
+      <a href="/" class="header__changeable-logo">RecoveryPlanner</a>
+
+      <ul class="header__main-links-list">
+        <li class="header__main-link">
+          <a href="#" target="__blank" class="link active">Admin</a>
+        </li>
+        <li class="header__main-link">
+          <a href="#" target="__blank" class="link">Compliance</a>
+        </li>
+        <li class="header__main-link">
+          <a href="#" target="__blank" class="link">Risk</a>
+        </li>
+        <li class="header__main-link">
+          <a href="#" target="__blank" class="link">BIA</a>
+        </li>
+        <li class="header__main-link">
+          <a href="#" target="__blank" class="link">Planning</a>
+        </li>
+        <li class="header__main-link">
+          <a href="#" target="__blank" class="link">Incidents</a>
+        </li>
+        <li class="header__main-link">
+          <a href="#" target="__blank" class="link">Files</a>
+        </li>
+      </ul>
+
+      <div class="header__user-cta">
+        <div class="header__notification-wrapper">
+          <button class="header__notification-button" type="button">
+            <i class="fas fa-bell icon"></i>
+          </button>      
+          <!-- Notification panel popup goes here -->
+        </div>
+
+        <div class="header__user-profile-wrapper">
+          <button class="header__user-profile-button">
+            <figure class="header__user-pic">
+              <img src="assets/img/default-user-avatar.png"
+                   class="image" alt="User name goes here" draggable="false">
+            </figure>
+          </button>
+          <!-- User actions panel popup goes here -->
+        </div>
+      </div>
+    </nav>
+  </header>
+
   <main class="main-content"></main>
 
   <footer class="rpx-footer footer">
@@ -78,5 +126,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
