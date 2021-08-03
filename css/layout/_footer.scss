@@ -7,27 +7,6 @@
   background-image: $blueGradient;
   padding: 0 1.5rem;
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   background-image: url('../assets/img/footer-background.jpg');
-  //   background-size: cover;
-  // }
-
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   background-color: rgba($bluePrimary, .95);
-  // }
-
   @media only screen and (max-width: 620px) {
     padding: 0 1rem;
   }
@@ -171,8 +150,6 @@
     width: fit-content;
     color: rgba($fontColorPrimary, .7);
     font-size: .7rem;
-
-    
   }
 
   &__networking-links {
