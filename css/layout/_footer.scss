@@ -149,7 +149,11 @@
     display: inline-block;
     width: fit-content;
     color: rgba($fontColorPrimary, .7);
-    font-size: .7rem;
+    font-size: .74rem;
+
+    @media only screen and (max-width: 620px) {
+      font-size: .7rem;
+    }
   }
 
   &__networking-links {
