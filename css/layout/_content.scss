@@ -7,18 +7,32 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 1.5rem;
+    gap: 1rem;
+
+    @media screen and (max-width: 650px) {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
   }
 
   .fake-content {
     width: 100%;
     min-height: 200px;
-    background-color: #dadde4;
-    border-radius: .6rem;
+    background-color: $blueLightest;
+    border-radius: .3rem;
+    transition: all .3s $easeOutCirc;
 
     &-1 {
       height: 250px;
       grid-column: 1/-1;
+    }
+
+    &-3 {
+      grid-row: 2/-1;
+    }
+
+    @media screen and (max-width: 650px) {
+      height: 200px;
     }
   }
 }

@@ -32,13 +32,25 @@
     }
 
     &[data-scrolled] {
-      height: 60px;
+      height: 50px;
       box-shadow: $basicDropshadow;
 
       &::before {
         visibility: visible;
         opacity: 1;
       }
+
+      .header__logo {
+    
+        .rpx-logo {
+          margin-top: .3rem;
+          transform: scale(0.95);
+        }
+    
+        .client-logo {
+          transform: scale(0.95);
+        }
+      }    
 
       .header__main-link {
 
@@ -54,38 +66,33 @@
     }
   }
 
-  &__changeable-logo {
+  &__logo {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    gap: .5rem;
     padding-right: 2.2rem;
-    
-    .text {
-      color: $bluePrimary;
-      font-size: 1.15rem;
-      font-weight: 600;
 
-      @media screen and (max-width: 850px) {
-        display: none;
-      }
+    .rpx-logo {
+      margin-top: .4rem;
+      height: 1.1rem;
+      transition: transform .2s $easeOutCirc;
     }
 
-    .image {
-      display: none;
+    .client-logo {
       height: 35px;
+      transition: transform .2s $easeOutCirc;
 
       img {
         width: auto;
         height: 100%;
-      }
-
-      @media screen and (max-width: 850px) {
-        display: block;
       }
     }
   }
 
   &__menu-btn {
     display: none;
-    width: 45px;
-    height: 45px;
+    
     justify-self: end;
     grid-column: -1;
 
@@ -109,6 +116,7 @@
   }
 
   &__main-link {
+    font-size: $fontSizeSmall;
 
     .link {
       display: flex;
@@ -147,13 +155,9 @@
     }
   }
 
-  // &__notification-wrapper {
-
-  // }
-
   &__notification-button {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 
     .icon {
       color: $blueDarker;
@@ -161,19 +165,12 @@
     }
   }
 
-  // &__user-profile-wrapper {
-    
-  // }
-
-  // &__user-profile-button {
-
-  // }
-
   &__user-pic {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     overflow: hidden;
+    transition: transform .3s $easeOutCirc;
 
     .image {
       width: 100%;

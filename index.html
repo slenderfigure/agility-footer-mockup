@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <base href="https://slenderfigure.github.io/agility-footer-mockup/">
+  <!-- <base href="https://slenderfigure.github.io/agility-footer-mockup/"> -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
@@ -12,13 +12,21 @@
 <body>
   <header class="rpx-header header">
     <nav class="header__navbar" id="main-navbar">
-      <a href="/" class="header__changeable-logo">
-        <span class="text">RecoveryPlanner</span>
-        <figure class="image">
-          <img src="assets/img/logo-blue.jpg" alt="Aigility logo" draggable="false" loading="lazy">
+      <a href="/" class="header__logo">
+        <figure class="client-logo">
+          <img src="assets/img/logo-blue.jpg" alt="Cient's Logo" 
+               draggable="false" loading="lazy">
+        </figure>
+
+        <figure class="rpx-logo">
+          <img src="assets/img/text-logo-blue.svg" alt="RecoveryPlanner Logo"
+               draggable="false" loading="lazy">
         </figure>
       </a>
-      <button class="header__menu-btn button-round" type="button" role="Display side menu" aria-label="Menu button">
+
+      <button class="header__menu-btn" 
+              type="button" role="Display side menu" 
+              aria-label="Menu button">
         <i class="fas fa-bars icon"></i>
       </button>
 
@@ -54,14 +62,19 @@
 
       <div class="header__user-cta">
         <div class="header__notification-wrapper">
-          <button class="header__notification-button button-round" type="button" role="notifications and alerts" aria-label="Notifications & Alerts">
+          <button class="header__notification-button button-round" 
+                  type="button" 
+                  role="notifications and alerts" 
+                  aria-label="Notifications & Alerts">
             <i class="fas fa-bell icon"></i>
           </button>      
           <!-- Notification panel popup goes here -->
         </div>
 
         <div class="header__user-profile-wrapper">
-          <button class="header__user-profile-button" role="user profile" aria-label="User profile">
+          <button class="header__user-profile-button" 
+                  role="user profile" 
+                  aria-label="User profile">
             <figure class="header__user-pic">
               <img src="assets/img/default-user-avatar.png"
                    class="image" alt="User name goes here" draggable="false">
@@ -78,6 +91,7 @@
       <section class="fake-content fake-content-1" role="Filler empty content"></section>
       <section class="fake-content fake-content-2" role="Filler empty content"></section>
       <section class="fake-content fake-content-3" role="Filler empty content"></section>
+      <section class="fake-content fake-content-4" role="Filler empty content"></section>
     </div>
   </main>
 
@@ -87,8 +101,10 @@
         <div class="footer__contact-info">
           <a href="#" target="__blank" class="footer__logo">
             <span class="text">RecoveryPlanner</span>
-            <img src="assets/img/logo-white.svg" 
+            <figure class="logo-image">
+              <img src="assets/img/logo-white.svg" 
                  alt="Agility Logo" class="icon" draggable="false">
+            </figure>
           </a>
           <address class="footer__address">
             <i class="fas fa-phone-alt icon"></i>
