@@ -10,6 +10,10 @@ body {
   ::selection {
     background-color: rgba($white, .4);
   }
+
+  &[active-menu] {
+    overflow: hidden;
+  }
 }
 
 * {

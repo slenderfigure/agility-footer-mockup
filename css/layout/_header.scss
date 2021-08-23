@@ -1,9 +1,16 @@
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 500;
+  z-index: 10;
+
+  &[active-menu] {
+
+    .header__menu-btn {
+      opacity: 0;
+    }
+  }
 
   &__navbar {
     position: relative;
@@ -92,9 +99,9 @@
 
   &__menu-btn {
     display: none;
-    
     justify-self: end;
     grid-column: -1;
+    transition: opacity .2s $easeOutCirc; 
 
     @media screen and (max-width: 1100px) {
       display: block;
@@ -131,11 +138,11 @@
       &.active {
         color: $bluePrimary;
         font-weight: 500;
-        background-color: rgba($blueLighter, .1);
+        background-color: rgba($blueLighter, .2);
       }
 
       &:hover {
-        background-color: rgba($blueLighter, .1);
+        background-color: rgba($blueLighter, .2);
       }
 
       .icon {

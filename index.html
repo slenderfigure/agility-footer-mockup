@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <base href="https://slenderfigure.github.io/agility-footer-mockup/">
+  <!-- <base href="https://slenderfigure.github.io/agility-footer-mockup/"> -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
@@ -10,57 +10,174 @@
   <script src="https://kit.fontawesome.com/56a075a703.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="rpx-header header">
-    <nav class="header__navbar" id="main-navbar">
-      <a href="/" class="header__logo">
-        <figure class="client-logo">
-          <img src="assets/img/logo-blue.jpg" alt="Cient's Logo" 
-               draggable="false" loading="lazy">
-        </figure>
+  <div class="body-wrapper" active-menu>
+    <header class="rpx-header header">
+      <nav class="header__navbar" id="main-navbar">
+        <a href="/" class="header__logo">
+          <figure class="client-logo">
+            <img src="assets/img/logo-blue.jpg" alt="Cient's Logo" 
+                  draggable="false" loading="lazy">
+          </figure>
+  
+          <figure class="rpx-logo">
+            <img src="assets/img/text-logo-blue.svg" alt="RecoveryPlanner Logo"
+                  draggable="false" loading="lazy">
+          </figure>
+        </a>
+  
+        <button class="header__menu-btn" 
+                type="button" role="Display side menu" 
+                aria-label="Menu button">
+          <i class="fas fa-bars icon"></i>
+        </button>
+  
+        <ul class="header__main-links-list">
+          <li class="header__main-link">
+            <a href="#" target="__blank" class="link active">Admin</a>
+          </li>
+          <li class="header__main-link">
+            <a href="#" target="__blank" class="link">Compliance</a>
+          </li>
+          <li class="header__main-link">
+            <a href="#" target="__blank" class="link">Risk</a>
+          </li>
+          <li class="header__main-link">
+            <a href="#" target="__blank" class="link">BIA</a>
+          </li>
+          <li class="header__main-link">
+            <a href="#" target="__blank" class="link">
+              Planning
+              <i class="fas fa-chevron-down icon"></i>
+            </a>
+          </li>
+          <li class="header__main-link">
+            <a href="#" target="__blank" class="link">
+              Incidents
+              <i class="fas fa-chevron-down icon"></i>
+            </a>
+          </li>
+          <li class="header__main-link">
+            <a href="#" target="__blank" class="link">Files</a>
+          </li>
+        </ul>
+  
+        <div class="header__user-cta">
+          <div class="header__notification-wrapper">
+            <button class="header__notification-button button-round" 
+                    type="button" 
+                    role="notifications and alerts" 
+                    aria-label="Notifications & Alerts">
+              <i class="fas fa-bell icon"></i>
+            </button>      
+            <!-- Notification panel popup goes here -->
+          </div>
+  
+          <div class="header__user-profile-wrapper">
+            <button class="header__user-profile-button" 
+                    role="user profile" 
+                    aria-label="User profile">
+              <figure class="header__user-pic">
+                <img src="assets/img/default-user-avatar.png"
+                      class="image" alt="User name goes here" draggable="false">
+              </figure>
+            </button>
+            <!-- User actions panel popup goes here -->
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+    <main class="main-content">
+      <div class="wrapper">
+        <section class="fake-content fake-content-1" role="Filler empty content"></section>
+        <section class="fake-content fake-content-2" role="Filler empty content"></section>
+        <section class="fake-content fake-content-3" role="Filler empty content"></section>
+        <section class="fake-content fake-content-4" role="Filler empty content"></section>
+      </div>
+    </main>
+  
+    <footer class="rpx-footer footer">
+      <div class="wrapper">
+        <div class="footer__links">
+          <div class="footer__contact-info">
+            <a href="#" target="__blank" class="footer__logo">
+              <span class="text">RecoveryPlanner</span>
+              <figure class="logo-image">
+                <img src="assets/img/logo-white.svg" 
+                    alt="Agility Logo" class="icon" draggable="false">
+              </figure>
+            </a>
+            <address class="footer__address">
+              <i class="fas fa-phone-alt icon"></i>
+              <a href="tel:18554473750" class="phone">+1 (855) 447-3750</a><br/>
+              <i class="fas fa-map-marker-alt icon"></i>1225 17th Street, 20th Floor<br/>
+              Denver, CO 80202
+            </address>
+          </div>
+    
+          <ul class="footer__main-links">
+            <li class="footer__list-item">
+              <a href="#" target="__blank" class="footer__link">Dashboard</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" target="__blank" class="footer__link">About Us</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" target="__blank" class="footer__link">Support</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" target="__blank" class="footer__link">Terms of Service</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" target="__blank" class="footer__link">Privacy</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="footer__bottom">
+          <p class="footer__owner-info">
+            Copyright &copy; 2007-2021 Agility Recovery. All rights reserved.
+          </p>
+    
+          <ul class="footer__networking-links">
+            <li>
+              <a href="https://www.facebook.com/AgilityRecovery" target="__blank" class="footer__social-link">
+                <i class="fab fa-facebook-f icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/agilityrecovery/" target="__blank" class="footer__social-link">
+                <i class="fab fa-linkedin-in icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/AgilityRecovery" target="__blank" class="footer__social-link">
+                <i class="fab fa-twitter icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://vimeo.com/agilityrecovery" target="__blank" class="footer__social-link">
+                <i class="fab fa-vimeo-v icon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>   
 
-        <figure class="rpx-logo">
-          <img src="assets/img/text-logo-blue.svg" alt="RecoveryPlanner Logo"
-               draggable="false" loading="lazy">
-        </figure>
-      </a>
+    <div class="overlay"></div>   
+  </div>
 
-      <button class="header__menu-btn" 
-              type="button" role="Display side menu" 
-              aria-label="Menu button">
-        <i class="fas fa-bars icon"></i>
+  <!-- Mobile navmenu -->
+  <aside class="mobile-menu" role="Navigation menu" active-menu>
+    <header class="mobile-menu__header">
+      <button class="mobile-menu__close-btn button-round" 
+        role="Close navigation menu"
+        type="button">
+        <i class="fas fa-times icon"></i>
       </button>
 
-      <ul class="header__main-links-list">
-        <li class="header__main-link">
-          <a href="#" target="__blank" class="link active">Admin</a>
-        </li>
-        <li class="header__main-link">
-          <a href="#" target="__blank" class="link">Compliance</a>
-        </li>
-        <li class="header__main-link">
-          <a href="#" target="__blank" class="link">Risk</a>
-        </li>
-        <li class="header__main-link">
-          <a href="#" target="__blank" class="link">BIA</a>
-        </li>
-        <li class="header__main-link">
-          <a href="#" target="__blank" class="link">
-            Planning
-            <i class="fas fa-chevron-down icon"></i>
-          </a>
-        </li>
-        <li class="header__main-link">
-          <a href="#" target="__blank" class="link">
-            Incidents
-            <i class="fas fa-chevron-down icon"></i>
-          </a>
-        </li>
-        <li class="header__main-link">
-          <a href="#" target="__blank" class="link">Files</a>
-        </li>
-      </ul>
-
-      <div class="header__user-cta">
+      <div class="mobile-menu__user-cta">
         <div class="header__notification-wrapper">
           <button class="header__notification-button button-round" 
                   type="button" 
@@ -77,93 +194,68 @@
                   aria-label="User profile">
             <figure class="header__user-pic">
               <img src="assets/img/default-user-avatar.png"
-                   class="image" alt="User name goes here" draggable="false">
+                    class="image" alt="User name goes here" draggable="false">
             </figure>
           </button>
-          <!-- User actions panel popup goes here -->
         </div>
       </div>
-    </nav>
-  </header>
+    </header>
 
-  <main class="main-content">
-    <div class="wrapper">
-      <section class="fake-content fake-content-1" role="Filler empty content"></section>
-      <section class="fake-content fake-content-2" role="Filler empty content"></section>
-      <section class="fake-content fake-content-3" role="Filler empty content"></section>
-      <section class="fake-content fake-content-4" role="Filler empty content"></section>
-    </div>
-  </main>
-
-  <footer class="rpx-footer footer">
-    <div class="wrapper">
-      <div class="footer__links">
-        <div class="footer__contact-info">
-          <a href="#" target="__blank" class="footer__logo">
-            <span class="text">RecoveryPlanner</span>
-            <figure class="logo-image">
-              <img src="assets/img/logo-white.svg" 
-                 alt="Agility Logo" class="icon" draggable="false">
-            </figure>
-          </a>
-          <address class="footer__address">
-            <i class="fas fa-phone-alt icon"></i>
-            <a href="tel:18554473750" class="phone">+1 (855) 447-3750</a><br/>
-            <i class="fas fa-map-marker-alt icon"></i>1225 17th Street, 20th Floor<br/>
-            Denver, CO 80202
-          </address>
-        </div>
-  
-        <ul class="footer__main-links">
-          <li class="footer__list-item">
-            <a href="#" target="__blank" class="footer__link">Dashboard</a>
+    <div class="mobile-menu__scrollable-wrapper">
+      <div class="mobile-menu__body">
+        <ul class="mobile-menu__links-list">
+          <li class="mobile-menu__link">
+            <a href="#" target="__blank" class="link active">Admin</a>
           </li>
-          <li class="footer__list-item">
-            <a href="#" target="__blank" class="footer__link">About Us</a>
+          <li class="mobile-menu__link">
+            <a href="#" target="__blank" class="link">Compliance</a>
           </li>
-          <li class="footer__list-item">
-            <a href="#" target="__blank" class="footer__link">Support</a>
+          <li class="mobile-menu__link">
+            <a href="#" target="__blank" class="link">Risk</a>
           </li>
-          <li class="footer__list-item">
-            <a href="#" target="__blank" class="footer__link">Terms of Service</a>
+          <li class="mobile-menu__link">
+            <a href="#" target="__blank" class="link">BIA</a>
           </li>
-          <li class="footer__list-item">
-            <a href="#" target="__blank" class="footer__link">Privacy</a>
+          <li class="mobile-menu__link">
+            <a href="#" target="__blank" class="link">
+              Planning
+              <i class="fas fa-chevron-down icon"></i>
+            </a>
+          </li>
+          <li class="mobile-menu__link">
+            <a href="#" target="__blank" class="link">
+              Incidents
+              <i class="fas fa-chevron-down icon"></i>
+            </a>
+          </li>
+          <li class="mobile-menu__link">
+            <a href="#" target="__blank" class="link">Files</a>
+          </li>
+          
+          <li class="mobile-menu__link overflow-test">
+            <a href="" class="link">Overflow test</a>
+          </li>
+          <li class="mobile-menu__link overflow-test">
+            <a href="" class="link">Overflow test</a>
+          </li>
+          <li class="mobile-menu__link overflow-test">
+            <a href="" class="link">Overflow test</a>
+          </li>
+          <li class="mobile-menu__link overflow-test">
+            <a href="" class="link">Overflow test</a>
+          </li>
+          <li class="mobile-menu__link overflow-test">
+            <a href="" class="link">Overflow test</a>
           </li>
         </ul>
       </div>
-
-      <div class="footer__bottom">
-        <p class="footer__owner-info">
+      <footer class="mobile-menu__footer">
+        <p class="owner-info">
           Copyright &copy; 2007-2021 Agility Recovery. All rights reserved.
         </p>
-  
-        <ul class="footer__networking-links">
-          <li>
-            <a href="https://www.facebook.com/AgilityRecovery" target="__blank" class="footer__social-link">
-              <i class="fab fa-facebook-f icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/agilityrecovery/" target="__blank" class="footer__social-link">
-              <i class="fab fa-linkedin-in icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/AgilityRecovery" target="__blank" class="footer__social-link">
-              <i class="fab fa-twitter icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://vimeo.com/agilityrecovery" target="__blank" class="footer__social-link">
-              <i class="fab fa-vimeo-v icon"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+      </footer>
     </div>
-  </footer>
-
+  </aside>
   <script src="js/main.js"></script>
 </body>
 </html>
