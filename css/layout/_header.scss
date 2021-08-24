@@ -131,8 +131,12 @@
         background-color: rgba($uglyBlue, .2);
       }
 
-      &:hover {
-        background-color: rgba(0, 0, 0, .1);
+      &[active-dropdown] {
+        background-color: #ddd;
+      }
+
+      &:hover:not(.active) {
+        background-color: #ddd;
       }
 
       .icon {

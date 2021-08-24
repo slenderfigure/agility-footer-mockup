@@ -450,8 +450,12 @@ button {
   background-color: rgba(0, 89, 132, 0.2);
 }
 
-.header__main-link .link:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.header__main-link .link[active-dropdown] {
+  background-color: #ddd;
+}
+
+.header__main-link .link:hover:not(.active) {
+  background-color: #ddd;
 }
 
 .header__main-link .link .icon {
@@ -954,6 +958,36 @@ button {
   font-size: 0.75rem;
   text-align: center;
   line-height: 1.5;
+}
+
+.mobile-menu__dropdown {
+  background-color: #555;
+}
+
+.mobile-menu__dropdown .link-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5rem;
+  width: 210px;
+  padding: .6rem .5rem;
+}
+
+.mobile-menu__dropdown .link-list__link {
+  display: block;
+  width: 100%;
+  padding: .8rem 1.2rem;
+  border-radius: .5rem;
+  -webkit-transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.mobile-menu__dropdown .link-list__link:hover {
+  background-color: rgba(9, 73, 106, 0.2);
 }
 
 .dropdown {

@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <base href="https://slenderfigure.github.io/agility-footer-mockup/">
+  <!-- <base href="https://slenderfigure.github.io/agility-footer-mockup/"> -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
   <title>Agility UI Rework - Mockup</title>
   <script src="https://kit.fontawesome.com/56a075a703.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <div class="body-wrapper">
+<body active-menu>
+  <div class="body-wrapper" active-menu>
     <header class="rpx-header header">
       <nav class="header__navbar" id="main-navbar">
         <a href="/" class="header__logo">
@@ -199,7 +199,7 @@
   </div>
 
   <!-- Mobile navmenu -->
-  <aside class="mobile-menu" role="Navigation menu">
+  <aside class="mobile-menu" role="Navigation menu" active-menu>
     <header class="mobile-menu__header">
       <button class="mobile-menu__close-btn button-round" 
         role="Close navigation menu"
@@ -251,12 +251,49 @@
               Planning
               <i class="fas fa-chevron-down icon"></i>
             </a>
+
+            <div class="mobile__dropdown">
+              <ul class="link-list">
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Plans</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Plans by Site</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Plans by Organization</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Products & Services</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Plans by Resources</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Teams</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="mobile-menu__link">
             <a href="#" target="__blank" class="link">
               Incidents
               <i class="fas fa-chevron-down icon"></i>
             </a>
+
+            <div class="mobile__dropdown">
+              <ul class="link-list">
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Incidents</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Notification Setup</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Incident Setup</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="mobile-menu__link">
             <a href="#" target="__blank" class="link">Files</a>

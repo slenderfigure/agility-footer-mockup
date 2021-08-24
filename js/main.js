@@ -16,10 +16,12 @@ const showDropdown = e => {
 
   if (dropdown.hasAttribute('active-dropdown')) closeDropdown();
 
+  link.children.item(0).setAttribute('active-dropdown', '');
   dropdown.setAttribute('active-dropdown', ''); 
 
   const closeDropdown = e => {
     dropdown.removeAttribute('active-dropdown');
+    link.children.item(0).removeAttribute('active-dropdown');
     window.removeEventListener('click', closeDropdown);
   }
 
