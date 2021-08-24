@@ -27,8 +27,6 @@ body[active-menu] {
   font-family: inherit;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  -ms-touch-action: none !important;
-      touch-action: none !important;
 }
 
 img {
