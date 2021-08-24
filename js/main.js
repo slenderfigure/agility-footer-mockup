@@ -97,7 +97,7 @@ const onEscKeyUp = e => {
   window.removeEventListener('keyup', onEscKeyUp);
 }
 
-window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('scroll', onScroll);
 
 document.querySelector('.header__menu-btn')
   .addEventListener('click', openMobileNavMenu); 
