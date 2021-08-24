@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
 
   &[active-menu] {
 
@@ -48,12 +48,7 @@
       }
 
       .header__logo {
-    
-        .rpx-logo {
-          margin-top: .3rem;
-          transform: scale(0.95);
-        }
-    
+        
         .client-logo {
           transform: scale(0.95);
         }
@@ -80,12 +75,6 @@
     gap: .5rem;
     padding-right: 2.2rem;
 
-    .rpx-logo {
-      margin-top: .4rem;
-      height: 1.1rem;
-      transition: transform .2s $easeOutCirc;
-    }
-
     .client-logo {
       height: 35px;
       transition: transform .2s $easeOutCirc;
@@ -108,7 +97,7 @@
     }
 
     .icon {
-      color: $bluePrimary;
+      color: $uglyBlue;
     }
   }
 
@@ -123,6 +112,7 @@
   }
 
   &__main-link {
+    position: relative;
     font-size: $fontSizeSmall;
 
     .link {
@@ -136,13 +126,13 @@
       transition: all .3s $easeOutCirc;
       
       &.active {
-        color: $bluePrimary;
+        color: $uglyBlue;
         font-weight: 500;
-        background-color: rgba($blueLighter, .2);
+        background-color: rgba($uglyBlue, .2);
       }
 
       &:hover {
-        background-color: rgba($blueLighter, .2);
+        background-color: rgba(0, 0, 0, .1);
       }
 
       .icon {
@@ -167,7 +157,7 @@
     height: 40px;
 
     .icon {
-      color: $blueDarker;
+      color: $uglyBlue;
       font-size: $fontSizeMedium;
     }
   }

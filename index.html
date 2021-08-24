@@ -10,17 +10,12 @@
   <script src="https://kit.fontawesome.com/56a075a703.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="body-wrapper" active-menu>
+  <div class="body-wrapper">
     <header class="rpx-header header">
       <nav class="header__navbar" id="main-navbar">
         <a href="/" class="header__logo">
           <figure class="client-logo">
-            <img src="assets/img/logo-blue.jpg" alt="Cient's Logo" 
-                  draggable="false" loading="lazy">
-          </figure>
-  
-          <figure class="rpx-logo">
-            <img src="assets/img/text-logo-blue.svg" alt="RecoveryPlanner Logo"
+            <img src="assets/img/logo-2.svg" alt="Cient's Logo" 
                   draggable="false" loading="lazy">
           </figure>
         </a>
@@ -44,17 +39,52 @@
           <li class="header__main-link">
             <a href="#" target="__blank" class="link">BIA</a>
           </li>
-          <li class="header__main-link">
+          <li class="header__main-link" data-expandable-link>
             <a href="#" target="__blank" class="link">
               Planning
               <i class="fas fa-chevron-down icon"></i>
             </a>
+            <div class="header__dropdown dropdown">
+              <ul class="link-list">
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Plans</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Plans by Site</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Plans by Organization</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Products & Services</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Plans by Resources</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Teams</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="header__main-link">
+          <li class="header__main-link" data-expandable-link>
             <a href="#" target="__blank" class="link">
               Incidents
               <i class="fas fa-chevron-down icon"></i>
             </a>
+            <div class="header__dropdown dropdown">
+              <ul class="link-list">
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Incidents</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Notification Setup</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Incident Setup</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="header__main-link">
             <a href="#" target="__blank" class="link">Files</a>
@@ -169,7 +199,7 @@
   </div>
 
   <!-- Mobile navmenu -->
-  <aside class="mobile-menu" role="Navigation menu" active-menu>
+  <aside class="mobile-menu" role="Navigation menu">
     <header class="mobile-menu__header">
       <button class="mobile-menu__close-btn button-round" 
         role="Close navigation menu"
@@ -230,22 +260,6 @@
           </li>
           <li class="mobile-menu__link">
             <a href="#" target="__blank" class="link">Files</a>
-          </li>
-          
-          <li class="mobile-menu__link overflow-test">
-            <a href="" class="link">Overflow test</a>
-          </li>
-          <li class="mobile-menu__link overflow-test">
-            <a href="" class="link">Overflow test</a>
-          </li>
-          <li class="mobile-menu__link overflow-test">
-            <a href="" class="link">Overflow test</a>
-          </li>
-          <li class="mobile-menu__link overflow-test">
-            <a href="" class="link">Overflow test</a>
-          </li>
-          <li class="mobile-menu__link overflow-test">
-            <a href="" class="link">Overflow test</a>
           </li>
         </ul>
       </div>

@@ -47,7 +47,11 @@
     color: inherit;
 
     .icon {
-      color: $bluePrimary;
+      color: #555;
+    }
+
+    &:hover {
+      background-color: transparent !important;
     }
   }
 
@@ -78,7 +82,7 @@
       transition: all .3s $easeOutCirc;
       
       &.active {
-        color: $bluePrimary;
+        color: $uglyBlue;
         font-weight: 500;
         background-color: rgba($blueLighter, .2);
       }
@@ -99,7 +103,7 @@
       display: inline-block;
       width: fit-content;
       color: #858585e6;
-      font-weight: 600;
+      font-weight: 500;
       font-size: $fontSizeSmaller;
       text-align: center;
       line-height: 1.5;

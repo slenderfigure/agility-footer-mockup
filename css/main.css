@@ -290,7 +290,7 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
 }
 
 .header[active-menu] .header__menu-btn {
@@ -342,12 +342,6 @@ button {
   opacity: 1;
 }
 
-.header__navbar[data-scrolled] .header__logo .rpx-logo {
-  margin-top: .3rem;
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
 .header__navbar[data-scrolled] .header__logo .client-logo {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -375,15 +369,6 @@ button {
           align-items: center;
   gap: .5rem;
   padding-right: 2.2rem;
-}
-
-.header__logo .rpx-logo {
-  margin-top: .4rem;
-  height: 1.1rem;
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: transform 0.2s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: transform 0.2s cubic-bezier(0, 0.55, 0.45, 1), -webkit-transform 0.2s cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 .header__logo .client-logo {
@@ -415,7 +400,7 @@ button {
 }
 
 .header__menu-btn .icon {
-  color: #03283a;
+  color: #005984;
 }
 
 .header__main-links-list {
@@ -435,6 +420,7 @@ button {
 }
 
 .header__main-link {
+  position: relative;
   font-size: 0.85rem;
 }
 
@@ -459,13 +445,13 @@ button {
 }
 
 .header__main-link .link.active {
-  color: #03283a;
+  color: #005984;
   font-weight: 500;
-  background-color: rgba(9, 73, 106, 0.2);
+  background-color: rgba(0, 89, 132, 0.2);
 }
 
 .header__main-link .link:hover {
-  background-color: rgba(9, 73, 106, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .header__main-link .link .icon {
@@ -495,7 +481,7 @@ button {
 }
 
 .header__notification-button .icon {
-  color: #041f2d;
+  color: #005984;
   font-size: 1rem;
 }
 
@@ -571,9 +557,7 @@ button {
   width: 100%;
   color: #fff;
   font-size: 0.85rem;
-  background-color: #03283a;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#03283a), color-stop(#032637), color-stop(#042333), color-stop(#042130), to(#041f2d));
-  background-image: linear-gradient(to right top, #03283a, #032637, #042333, #042130, #041f2d);
+  background-color: #005984;
   padding: 0 1.5rem;
 }
 
@@ -877,8 +861,8 @@ button {
   width: 100%;
   height: calc(100% - 85px);
   padding: 1rem;
-  -webkit-transition: all 0.4s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: all 0.4s cubic-bezier(0, 0.55, 0.45, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
   overflow-y: auto;
 }
 
@@ -889,7 +873,11 @@ button {
 }
 
 .mobile-menu__close-btn .icon {
-  color: #03283a;
+  color: #555;
+}
+
+.mobile-menu__close-btn:hover {
+  background-color: transparent !important;
 }
 
 .mobile-menu__user-cta {
@@ -937,7 +925,7 @@ button {
 }
 
 .mobile-menu__link .link.active {
-  color: #03283a;
+  color: #005984;
   font-weight: 500;
   background-color: rgba(9, 73, 106, 0.2);
 }
@@ -962,9 +950,59 @@ button {
   width: -moz-fit-content;
   width: fit-content;
   color: #858585e6;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.75rem;
   text-align: center;
   line-height: 1.5;
+}
+
+.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 3rem;
+  -webkit-transform: translateY(-1rem) scale(0.9);
+          transform: translateY(-1rem) scale(0.9);
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.2rem 2.5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.2rem 2.5rem rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  -webkit-transition: all 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+  overflow: hidden;
+}
+
+.dropdown[active-dropdown] {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.dropdown .link-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5rem;
+  width: 210px;
+  padding: .6rem .5rem;
+}
+
+.dropdown .link-list__link {
+  display: block;
+  width: 100%;
+  padding: .8rem 1.2rem;
+  border-radius: .5rem;
+  -webkit-transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.dropdown .link-list__link:hover {
+  background-color: rgba(9, 73, 106, 0.2);
 }
 /*# sourceMappingURL=main.css.map */
