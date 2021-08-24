@@ -6,6 +6,31 @@ const bodyWrapper = body.querySelector('.body-wrapper');
 const mobileMenu = body.querySelector('.mobile-menu');
 const linkList = document.querySelector('.header__main-links-list');
 
+const onMobileMenuClick = e => {
+  if (!e.target.closest('[mobile-expandable-link]')) return;
+
+  e.preventDefault();
+
+  const link = e.target.closest('[mobile-expandable-link]');
+  const dropdown = link.querySelector('.mobile-menu__dropdown');
+  const links = [...document.querySelectorAll('[mobile-expandable-link')];
+  const targetHeight = dropdown.clientHeight + 41.59;
+
+  const resetState = (link) => {
+    link.removeAttribute('active-dropdown');
+    link.removeAttribute('style');
+  }
+
+  if (link.hasAttribute('active-dropdown')) {
+    return resetState(link);
+  }
+
+  links.forEach(link => resetState(link));
+  link.setAttribute('active-dropdown', '');
+  link.style.height = `${targetHeight}px`;
+  
+}
+
 const showDropdown = e => {
   e.preventDefault();
 
@@ -53,7 +78,9 @@ const openMobileNavMenu = e => {
     bodyWrapper, 
     mobileMenu
   ].forEach(ele => ele.setAttribute('active-menu', ''));
+
   bodyWrapper.addEventListener('click', onOutsideClick);
+  window.addEventListener('keyup', onEscKeyUp);
 }
 
 const onScroll = () => {
@@ -63,9 +90,15 @@ const onScroll = () => {
   else navbar.removeAttribute('data-scrolled');
 }
 
-// testing btn: header__user-profile-button
-// target btn: header__menu-btn
-window.addEventListener('scroll', onScroll);
+const onEscKeyUp = e => {
+  if (e.key !== 'Escape') return;
+
+  closeMobileNavMenu();
+  window.removeEventListener('keyup', onEscKeyUp);
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+
 document.querySelector('.header__menu-btn')
   .addEventListener('click', openMobileNavMenu); 
 
@@ -73,3 +106,5 @@ document.querySelector('.mobile-menu__close-btn')
   .addEventListener('click', closeMobileNavMenu);
 
 linkList.addEventListener('click', showDropdown);
+
+mobileMenu.addEventListener('click', onMobileMenuClick);
