@@ -22,8 +22,7 @@
     flex-direction: column;
     gap: .5rem;
     width: 210px;
-    padding: .6rem .5rem;
-    
+    padding: 1rem .5rem;
 
     &__link {
       display: block;
@@ -33,7 +32,7 @@
       transition: all .3s $easeOutCirc;
 
       &:hover {
-        background-color: rgba($blueLighter, .2);
+        background-color: rgba($uglyBlue, .2);
       }
     }
   }

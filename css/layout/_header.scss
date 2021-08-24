@@ -156,14 +156,26 @@
     }
   }
 
+  &__notification-wrapper {
+    position: relative;
+  }
+
   &__notification-button {
     width: 40px;
     height: 40px;
+
+    &[active-dropdown] {
+      background-color: rgba($blueLighter, .2);
+    }
 
     .icon {
       color: $uglyBlue;
       font-size: $fontSizeMedium;
     }
+  }
+
+  &__user-profile-wrapper {
+    position: relative;
   }
 
   &__user-pic {
